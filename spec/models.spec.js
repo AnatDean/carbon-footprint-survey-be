@@ -2,11 +2,9 @@ const chai = require('chai');
 const assertArrays = require('chai-arrays');
 const { expect } = chai;
 const { selectQuestionById, selectQuestions } = require('../models/');
-const connection = require('../db/');
 const { describe } = require('mocha');
 chai.use(assertArrays);
 describe('models', () => {
-  after(() => connection.end());
   describe('selectQuestionById', () => {
     it('returns the correct question with possible answers', async () => {
       const result = await selectQuestionById(2);
