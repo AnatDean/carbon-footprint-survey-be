@@ -14,9 +14,9 @@ exports.selectQuestionById = (id) => {
       [id]
     )
     .then(({ rows }) => {
-      if (!rows.length)
+      if (!rows.length) // if no question matches the id
         return Promise.reject({ status: 404, msg: 'Not Found' });
-      else return formatQuestionObject(rows);
+      else return formatQuestionObject(rows); 
     });
 };
 
