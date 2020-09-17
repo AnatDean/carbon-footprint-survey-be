@@ -16,6 +16,14 @@ describe('models', () => {
         "I'm not sure",
       ]);
     });
+    it('throws an error if you provide a bad / not existing id', async () => {
+      return selectQuestionById(200)
+        .then(Promise.reject)
+        .catch((err) => {
+          expect(err.status).to.equal(404);
+          expect(err.msg).to.equal('Not Found');
+        });
+    });
   });
   describe('selectQuestions', () => {
     it('returns list of all questions', async () => {
