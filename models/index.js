@@ -17,3 +17,7 @@ exports.getQuestionById = (id) => {
       return formatQuestionObject(rows);
     });
 };
+
+exports.getQuestions = () => {
+  return db.query(`SELECT * FROM questions;`).then(({ rows }) => rows);
+};
