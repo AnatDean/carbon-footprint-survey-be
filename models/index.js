@@ -4,7 +4,7 @@ exports.selectQuestionById = (id) => {
   return db
     .query(
       `
-  SELECT question, answer FROM question_answers
+  SELECT questions.question_id, question, answer FROM question_answers
   JOIN questions ON 
   question_answers.question_id = questions.question_id
   JOIN answers ON 

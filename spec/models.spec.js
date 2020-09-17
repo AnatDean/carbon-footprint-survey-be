@@ -34,5 +34,6 @@ describe('models', () => {
         question: 'How much food ends up wasted in your household?',
       });
     });
+    
   });
 });

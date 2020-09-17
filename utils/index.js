@@ -4,6 +4,10 @@ exports.formatQuestionObject = (questionWithAnswersArray) => {
       questionObject.answers.push(answer);
       return questionObject;
     },
-    { question: questionWithAnswersArray[0].question, answers: [] }
+    {
+      question_id: questionWithAnswersArray[0].question_id,
+      question: questionWithAnswersArray[0].question,
+      answers: [],
+    }
   );
 };
