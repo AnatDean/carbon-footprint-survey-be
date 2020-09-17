@@ -1,6 +1,6 @@
 const db = require('../db/');
 const { formatQuestionObject } = require('../utils');
-exports.getQuestionById = (id) => {
+exports.selectQuestionById = (id) => {
   return db
     .query(
       `
@@ -18,6 +18,6 @@ exports.getQuestionById = (id) => {
     });
 };
 
-exports.getQuestions = () => {
+exports.selectQuestions = () => {
   return db.query(`SELECT * FROM questions;`).then(({ rows }) => rows);
 };
