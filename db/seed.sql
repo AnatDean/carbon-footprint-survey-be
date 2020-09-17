@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS survey;
-CREATE DATABASE survey;
+DROP DATABASE IF EXISTS survey_test;
+CREATE DATABASE survey_test;
 
-\c survey
+\c survey_test
 
 CREATE TABLE questions (
   question_id SERIAL PRIMARY KEY,
